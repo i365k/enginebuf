@@ -1,0 +1,258 @@
+/*
+Examples of enginebuf
+2021@HS
+*/
+syntax = "enginebuf";
+
+/*
+Build abstraction
+Abstract four basic components
+*/
+
+/*
+Abstraction of variables
+Used for setting and obtaining global variables
+*/
+service Variable {
+    rpc SetVariable (SetVariableRequest) returns (SetVariableResponse) {
+    }
+    rpc GetVariable (GetVariableRequest) returns (GetVariableResponse) {
+    }
+}
+
+/*
+Abstraction of method
+Used for global method setting and acquisition
+*/
+service Method {
+    rpc SetMethod (SetMethodRequest) returns (SetMethodResponse) {
+    }
+    rpc GetMethod (GetMethodRequest) returns (GetMethodResponse) {
+    }
+}
+
+/*
+Abstraction of node
+Used to set and get the node
+Node is the carrier of any variable, icon
+*/
+service Node {
+    rpc SetNode (SetNodeRequest) returns (SetNodeResponse) {
+    }
+    rpc GetNode (GetNodeRequest) returns (GetNodeResponse) {
+    }
+}
+
+/*
+Abstraction of interface
+Used to set and get the interface
+It can be a collection of nodes, or a scene or CG
+*/
+service Interface {
+    rpc SetInterface (SetInterfaceRequest) returns (SetInterfaceResponse) {
+    }
+    rpc GetInterface (GetInterfaceRequest) returns (GetInterfaceResponse) {
+    }
+}
+
+/*
+Conventions about variables
+Commonly used variables are agreed, which can be increased with demand later
+*/
+
+//Boolean type
+type double struct {
+    address   string
+    length    int
+    Variable  bool
+}
+
+type float struct {
+    address   string
+    length    int
+    Variable  bool
+}
+
+type int32 struct {
+    address   string
+    length    int
+    Variable  bool
+}
+
+type int64 struct {
+    address   string
+    length    int
+    Variable  bool
+}
+
+type uint32 struct {
+    address   string
+    length    int
+    Variable  bool
+}
+
+type uint64 struct {
+    address   string
+    length    int
+    Variable  bool
+}
+
+type uint64 struct {
+    address   string
+    length    int
+    Variable  bool
+}
+
+type sint32 struct {
+    address   string
+    length    int
+    Variable  bool
+}
+
+type sint64 struct {
+    address   string
+    length    int
+    Variable  bool
+}
+
+type fixed32 struct {
+    address   string
+    length    int
+    Variable  bool
+}
+
+type fixed64 struct {
+    address   string
+    length    int
+    Variable  bool
+}
+
+type sfixed32 struct {
+    address   string
+    length    int
+    Variable  bool
+}
+
+type sfixed64 struct {
+    address   string
+    length    int
+    Variable  bool
+}
+
+type bool struct {
+    address   string
+    length    int
+    Variable  bool
+}
+
+type string struct {
+    address   string
+    length    int
+    Variable  bool
+}
+
+type bytes struct {
+    address   string
+    length    int
+    Variable  bool
+}
+
+//Variable parameters
+message SetVariableRequest {
+  required bytes data  = 1;
+  repeated bytes data2 = 2;
+  optional bytes data3 = 3;
+}
+
+message SetVariableResponse {
+  required bytes data  = 1;
+  repeated bytes data2 = 2;
+  optional bytes data3 = 3;
+}
+
+message GetVariableRequest {
+  required bytes data  = 1;
+  repeated bytes data2 = 2;
+  optional bytes data3 = 3;
+}
+
+message GetVariableResponse {
+  required bytes data  = 1;
+  repeated bytes data2 = 2;
+  optional bytes data3 = 3;
+}
+
+//Method parameters
+message SetMethodRequest {
+  required bytes data  = 1;
+  repeated bytes data2 = 2;
+  optional bytes data3 = 3;
+}
+
+message SetMethodResponse {
+  required bytes data  = 1;
+  repeated bytes data2 = 2;
+  optional bytes data3 = 3;
+}
+
+message GetMethodRequest {
+  required bytes data  = 1;
+  repeated bytes data2 = 2;
+  optional bytes data3 = 3;
+}
+
+message GetMethodResponse {
+  required bytes data  = 1;
+  repeated bytes data2 = 2;
+  optional bytes data3 = 3;
+}
+
+//Node parameters
+message SetNodeRequest {
+  required bytes data  = 1;
+  repeated bytes data2 = 2;
+  optional bytes data3 = 3;
+}
+
+message SetNodeResponse {
+  required bytes data  = 1;
+  repeated bytes data2 = 2;
+  optional bytes data3 = 3;
+}
+
+message GetNodeRequest {
+  required bytes data  = 1;
+  repeated bytes data2 = 2;
+  optional bytes data3 = 3;
+}
+
+message GetNodeResponse {
+  required bytes data  = 1;
+  repeated bytes data2 = 2;
+  optional bytes data3 = 3;
+}
+
+//Interface parameters
+message SetInterfaceRequest {
+  required bytes data  = 1;
+  repeated bytes data2 = 2;
+  optional bytes data3 = 3;
+}
+
+message SetInterfaceResponse {
+  required bytes data  = 1;
+  repeated bytes data2 = 2;
+  optional bytes data3 = 3;
+}
+
+message GetInterfaceRequest {
+  required bytes data  = 1;
+  repeated bytes data2 = 2;
+  optional bytes data3 = 3;
+}
+
+message GetInterfaceResponse {
+  required bytes data  = 1;
+  repeated bytes data2 = 2;
+  optional bytes data3 = 3;
+}
